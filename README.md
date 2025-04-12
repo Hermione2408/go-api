@@ -1,6 +1,5 @@
 # TWReporter's Golang Backend API
 
-## Environment 
 ### Development
 
 #### Go module
