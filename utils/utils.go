@@ -25,6 +25,7 @@ func GenerateRandomBytes(n int) ([]byte, error) {
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
+	fmt.Println(b)
 
 	return b, nil
 }
