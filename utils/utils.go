@@ -46,12 +46,7 @@ func GenerateEncryptedPassword(password []byte) (string, error) {
 
 // GetProjectRoot returns absolute path of current project root.
 func GetProjectRoot() string {
-	type emptyStruct struct{}
-	const rootPkg = "main"
 
-	// use the reflect package to retrieve current package path
-	// [go module name]/[package name]
-	// i.e. github.com/twreporter/go-api/utils
 	pkg := reflect.TypeOf(emptyStruct{}).PkgPath()
 	pkgWithoutModPrefix := string([]byte(pkg)[strings.LastIndex(pkg, "/")+1:])
 
