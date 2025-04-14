@@ -8,6 +8,7 @@ After go-api@5.0.0 is released, go-api no longer needs to be developed within $G
 
 ```golang
 $ cd go-api
+here to test
 
 // Run test
 $ go test ./...
