@@ -18,7 +18,7 @@ type JWTMiddleware interface {
 type mailServiceMiddleware struct {
 	JWTMiddleware *jwtmiddleware.JWTMiddleware
 }
-
+fmt.Println("here")
 func (m mailServiceMiddleware) ValidateAuthorization() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		if err := m.JWTMiddleware.CheckJWT(c.Writer, c.Request); err != nil {
