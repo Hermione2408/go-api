@@ -9,6 +9,7 @@ import (
 // GetGender format the gender string
 func GetGender(s string) null.String {
 	var gender string
+fmt.Println("here");
 	switch s {
 	case "":
 		gender = s
