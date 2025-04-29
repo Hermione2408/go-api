@@ -66,6 +66,7 @@ func ValidateAuthorization() gin.HandlerFunc {
 		}
 
 		userProperty = c.Request.Context().Value(authUserProperty)
+		fmt.Println("here");
 		claims = userProperty.(*jwt.Token).Claims.(jwt.MapClaims)
 		if !claims.VerifyAudience(globals.Conf.App.JwtAudience, verifyRequired) ||
 			!claims.VerifyIssuer(globals.Conf.App.JwtIssuer, verifyRequired) {
